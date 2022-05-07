@@ -1,6 +1,6 @@
 import { RecentActors } from "@mui/icons-material";
 import axios from "axios";
-const BASE_URL='https://akramb19215.pythonanywhere.com'
+const BASE_URL=process.env.REACT_APP_BASE
 export const PATHS = {
     BASE:BASE_URL,
     ARTICLE: BASE_URL+'/article/',
