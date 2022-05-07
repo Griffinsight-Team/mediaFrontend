@@ -1,23 +1,23 @@
 import { RecentActors } from "@mui/icons-material";
 import axios from "axios";
-
+const BASE_URL='https://akramb19215.pythonanywhere.com'
 export const PATHS = {
-    BASE:'https://akramb19215.pythonanywhere.com',
-    ARTICLE: 'https://akramb19215.pythonanywhere.com/article/',
-    ART:(id)=> 'https://akramb19215.pythonanywhere.com/article/'+id+'/',
-    NEWSLETTER:'https://akramb19215.pythonanywhere.com/newsletter/',
-    SEARCH: (id) => 'https://akramb19215.pythonanywhere.com/search/'+ id+'/',
-    RECENT: 'https://akramb19215.pythonanywhere.com/article/recent',
-    COMMENT: (id) => 'https://akramb19215.pythonanywhere.com/comment/'+ id+'/',
-    COMMENTPOST:  'https://akramb19215.pythonanywhere.com/comment/',
-    ACADEMICS:'https://akramb19215.pythonanywhere.com/article/academics',
-    INSTILIFE:'https://akramb19215.pythonanywhere.com/article/instilife',
-    SPOTLIGHT:'https://akramb19215.pythonanywhere.com/article/spotlight',
-    SCITECH:'https://akramb19215.pythonanywhere.com/article/scitech',
-    OPINION:'https://akramb19215.pythonanywhere.com/article/opinion',
-    WATCH:'https://akramb19215.pythonanywhere.com/spotlight/',
-    PINNED:'https://akramb19215.pythonanywhere.com/pinnned/',
-    PINNEDLIST:'https://akramb19215.pythonanywhere.com/pinned/'
+    BASE:BASE_URL,
+    ARTICLE: BASE_URL+'/article/',
+    ART:(id)=> BASE_URL+'/article/'+id+'/',
+    NEWSLETTER:BASE_URL+'/newsletter/',
+    SEARCH: (id) => BASE_URL+'/search/'+ id+'/',
+    RECENT: BASE_URL+'/article/recent',
+    COMMENT: (id) => BASE_URL+'/comment/'+ id+'/',
+    COMMENTPOST:  BASE_URL+'/comment/',
+    ACADEMICS:BASE_URL+'/article/academics',
+    INSTILIFE:BASE_URL+'/article/instilife',
+    SPOTLIGHT:BASE_URL+'/article/spotlight',
+    SCITECH:BASE_URL+'/article/scitech',
+    OPINION:BASE_URL+'/article/opinion',
+    WATCH:BASE_URL+'/spotlight/',
+    PINNED:BASE_URL+'/pinnned/',
+    PINNEDLIST:BASE_URL+'/pinned/'
 }
 
 export const API = {
