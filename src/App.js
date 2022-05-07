@@ -2,22 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 
 import React from 'react';
-import RichText from './components/richText'
-import APPBar from './components/APPBar'
-import NavBar from './components/navbar';
-import Home from './views/home'
-import Main from './views/main'
+import APPbar from './components/APPBar';
+import DesktopMain from './views/desktopmain';
+import Main from './views/main';
+import Home from './views/home';
+import Footer from './components/footerDesktop';
 function App() {
   return (
-    <div className="App">
-      <APPBar/>
-     
-   
-     
-      <Main/>
-      <Home/>
-      
-    </div>
+    <>
+    <APPbar/>
+    <Main/>
+    
+    </>
   );
 }
 

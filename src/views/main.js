@@ -4,6 +4,9 @@ import Grid from '@mui/material/Grid';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 import MobileMain from './mobilemain';
 import DesktopMain from './desktopmain';
+import ScrollButton from '../components/scrollButton';
+
+
 class Main extends React.Component {
     constructor(props) {
       super(props)
@@ -15,14 +18,18 @@ class Main extends React.Component {
       window.matchMedia("(min-width: 1000px)").addEventListener('change', handler);
     }
     render() {
-        const { location } = this.props;
-        console.log(this.props);
       return (
-        <Container style={{marginTop:'100px',borderRadius:'10px'}}>
-            
+        <div style={{marginTop:'120px',borderRadius:'10px'}}>
+       
         {this.state.matches && (<DesktopMain/>)}
         {!this.state.matches && (<MobileMain/>)}
-        </Container>
+        <div style={{background:'black',color:'white',textAlign:'center',padding:'4px'}}>
+        <p>Made with ❤️ by techies at Griffinsight</p><p>© 2022 Griffinsight, IIT Mandi</p>
+
+        </div>
+        
+        <ScrollButton/>
+        </div>
       );
     }
   }

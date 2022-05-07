@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  background:white;
 }
 
 code {
@@ -13,3 +13,7 @@ code {
     monospace;
 }
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500&family=DM+Serif+Display&family=Quicksand&display=swap');
+#root{
+  font-family: 'Quicksand', sans-serif;
+}

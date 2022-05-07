@@ -33,3 +33,55 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  background:#ffffff;
+  box-shadow: rgba(32, 34, 36, 0.3) 0px 1px 2px 0px, rgba(203, 224, 240, 0.15) 0px 2px 6px 2px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color:rgb(0, 0, 0);
+  z-index: 100;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:10px;
+  background: black;
+  color: white;
+}
+.footerMob{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:10px;
+  background: black;
+  color: white;
+}
+
+.link{
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pinned{
+  
+  height: 50%;
+}
+
+.toggle{
+  color:white;
+}
+

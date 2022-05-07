@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'; 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,78 +10,46 @@ import Stack from '@mui/material/Stack';
 import { CardActionArea } from '@mui/material';
 import Container from '@mui/material/Container';
 import blogo from '../Assets/blogo.png';
+import { getArticle } from '../service/api';
+import Parser from 'html-react-parser';
 export default function Home(){
+  const [data, setData] = useState([]);
+  useEffect(async()=>{getArticle((res)=>{setData(res.results)}); },[setData])
+  console.log(data)
     return(
         <>
     <Container>
     <Stack
-        direction="row"
+        direction="column"
         divider={<Divider orientation="vertical" flexItem />}
         spacing={2}
       >
-          <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image={blogo}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image={blogo}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image={blogo}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+        {data.map((item)=>(
+          <Card >
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            height="140"
+            image={item.thumbnail}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {item.title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            {Parser(item.content)} 
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+       
+
+        ))}
+          
+   
       </Stack>
 
     </Container>
