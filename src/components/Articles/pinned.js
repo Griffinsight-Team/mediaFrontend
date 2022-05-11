@@ -24,7 +24,7 @@ export default function PinnedSideBar(){
               <div style={{display:"flex" ,flexDirection:'column',padding:'10px'}}>
               {data.map((item)=>(
               <>
-              <a href={`/${item.sno}`} style={{color:'black',textDecoration:'None'}}>
+              <a href={`/${item.sno}`} style={{color:'black',textDecoration:'None'}} key={item.sno}>
               <Button variant="outlined" style={{color:'black', border:'none'}} >
               {item.title}
             </Button>
