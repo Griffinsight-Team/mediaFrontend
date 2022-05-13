@@ -50,7 +50,7 @@ export default function Read() {
         <p className="text-muted">{data.date}</p>
         </div>
         
-        <img width='100%' height ='100%' style={{marginBottom:'10px'}} src={`${PATHS.BASE}/${data.thumbnail}`} alt="" />
+        <img width='100%' height ='100%' style={{marginBottom:'10px'}} src={`${PATHS.BASE}${data.thumbnail}`} alt="" />
         
         <div  className='example' style={{width:'inherit' ,overflow: 'auto'}}>
             {parse(data.content)}
