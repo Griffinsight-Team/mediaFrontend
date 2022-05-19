@@ -37,7 +37,7 @@ export default function Read() {
   if (data!=0) {
     scrollToTop();
     if(data.sno==-1){
-      return(<><h1>No Data Found</h1></>);
+      return(<><h1>Coming soon</h1></>);
     }else{
     return (
       <>
