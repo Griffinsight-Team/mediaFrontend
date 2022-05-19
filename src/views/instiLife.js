@@ -38,7 +38,7 @@ export default function InstiLife(){
     if(data){
     return(
        <>
-       {!data1.count?<h1>No Data Found</h1>:<></>}     
+       {!data1.count?<h1>Coming soon</h1>:<></>}     
        {data.map((item)=>(
           <Card sx={{ marginBottom: "20px" }}  key={item.sno}>
             <Link to={`/${item.sno}`} style={Style}>

@@ -39,6 +39,7 @@ export default function Articles(){
     return(
        <>
         <Pinned></Pinned>
+        {!data1.count?<h1>Coming soon</h1>:<></>}   
        {data.map((item)=>(
           <Card sx={{ marginBottom: "20px" }}  key={item.sno}>
             <Link to={`/${item.sno}`} style={Style}>
