@@ -45,21 +45,23 @@
 }
 
 .footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding:10px;
-  background: black;
-  color: white;
-}
-.footerMob{
-  
+  border-top: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding:10px;
-  background: black;
-  color: white;
+  color: black;
+  text-align: center;
+}
+.footerMob{
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:10px;
+  
+  color: black;
+  text-align: center;
 }
 
 .link{

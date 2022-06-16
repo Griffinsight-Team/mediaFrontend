@@ -41,7 +41,7 @@ export default function SpotlightWatch(){
        {data.map((item)=>(
           <Card sx={{ marginBottom: "20px" }}  key={item.sno}>
            
-           <ReactPlayer width='inherit' url={item.url} />
+           <ReactPlayer width='inherit' url={item.url} controls={true} />
             <CardContent>
           
               <Typography  style={{fontFamily: "'DM Serif Display', serif"}} gutterBottom variant="h5" component="div">

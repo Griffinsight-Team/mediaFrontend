@@ -106,7 +106,8 @@ export default function MobileMain(){
          <PinnedSideBar/>
         </div>
     </Container>
-    <FooterMob/>
+    <Container><FooterMob/></Container>
+    
     
     
  
