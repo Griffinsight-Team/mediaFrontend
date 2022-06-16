@@ -23,10 +23,7 @@ class Main extends React.Component {
        
         {this.state.matches && (<DesktopMain/>)}
         {!this.state.matches && (<MobileMain/>)}
-        <div style={{background:'black',color:'white',textAlign:'center',padding:'4px'}}>
-        <p>Made with ❤️ by techies at Griffinsight</p><p>© 2022 Griffinsight, IIT Mandi</p>
-
-        </div>
+        
         
         <ScrollButton/>
         </div>

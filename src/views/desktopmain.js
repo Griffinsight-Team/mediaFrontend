@@ -82,7 +82,7 @@ export default function DesktopMain() {
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          padding: "4px",
+          // padding: "4px",
         }}
       >
         <div
@@ -103,8 +103,9 @@ export default function DesktopMain() {
             display: "flex",
             flexDirection: "column",
             height: "100%",
-            width: "25%",
+            width: "28%",
             marginLeft: "10px",
+            marginTop: "8px"
           }}
         >
           <Card sx={{ minWidth: 275 }}>
@@ -140,8 +141,8 @@ export default function DesktopMain() {
         
       </Container>
 
-
-      <Footer/>
+      <Container><Footer/></Container>
+      
       
 
      
