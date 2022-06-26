@@ -1,20 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import "./App.css";
+import APPbar from "./components/APPBar";
+import Main from "./views/main";
 
-import React from 'react';
-import APPbar from './components/APPBar';
-import DesktopMain from './views/desktopmain';
-import Main from './views/main';
-import Home from './views/home';
-import Footer from './components/footerDesktop';
 function App() {
-  return (
-    <>
-    <APPbar/>
-    <Main/>
-    
-    </>
-  );
+    return (
+        <>
+            <APPbar />
+            <Main />
+        </>
+    );
 }
 
 export default App;
