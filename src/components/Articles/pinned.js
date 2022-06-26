@@ -5,10 +5,13 @@ import { Button } from "react-bootstrap";
 import { getPinned } from "../../service/api";
 export default function PinnedSideBar() {
     const [data, setData] = useState([]);
-    useEffect(async () => {
-        getPinned((res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getPinned((res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [setData]);
 
     return (

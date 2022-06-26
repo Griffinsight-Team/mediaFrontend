@@ -26,10 +26,13 @@ export default function InstiLife() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getInstiLife(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getInstiLife(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

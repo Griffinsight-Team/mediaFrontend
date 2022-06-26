@@ -25,10 +25,13 @@ export default function SciTech() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getSciTech(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getSciTech(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

@@ -26,10 +26,13 @@ export default function Academics() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getAcademics(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getAcademics(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

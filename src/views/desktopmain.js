@@ -21,7 +21,6 @@ import Spotlight from "./spotlight";
 export default function DesktopMain() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
-    const onSubmit = (data) => console.log(data);
     const [message, setMessage] = useState();
     function handleSubmit(e) {
         e.preventDefault();

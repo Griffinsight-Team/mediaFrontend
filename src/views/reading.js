@@ -15,15 +15,18 @@ const scrollToTop = () => {
 export default function Read() {
     const location = useLocation();
 
-    const [path, setPath] = useState(getPath(location.pathname));
+    const [path] = useState(getPath(location.pathname));
     const [data, setData] = useState(0);
-    useEffect(async () => {
-        getArticlebyId(path, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getArticlebyId(path, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [path]);
 
-    if (data != 0) {
+    if (data !== 0) {
         scrollToTop();
         if (data.sno == -1) {
             return (
@@ -91,13 +94,11 @@ export default function Read() {
         }
     } else {
         return (
-            <>
-                <div className="text-center">
-                    <div className="spinner-border" role="status">
-                        <span className="sr-only"></span>
-                    </div>
+            <div className="text-center">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only"></span>
                 </div>
-            </>
+            </div>
         );
     }
 }

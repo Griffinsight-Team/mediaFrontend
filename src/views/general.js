@@ -27,10 +27,13 @@ export default function Articles() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getArticle(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getArticle(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

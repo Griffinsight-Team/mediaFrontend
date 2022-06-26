@@ -16,17 +16,20 @@ const scrollToTop = () => {
        in place of 'smooth' */
     });
 };
-const Style = { textDecoration: "none", color: "black" };
+
 export default function SpotlightWatch() {
     const [page, setPage] = useState(1);
     const params = {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getSpotLightWatch(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getSpotLightWatch(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

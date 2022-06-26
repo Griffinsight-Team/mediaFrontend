@@ -25,10 +25,13 @@ export default function Opinion() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getOpinion(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getOpinion(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

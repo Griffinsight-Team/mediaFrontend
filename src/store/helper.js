@@ -10,7 +10,7 @@ export const FIELDS = [
 export function getPath(path) {
     const myArray = path.split("/");
     let i = 1;
-    while (myArray[myArray.length - i].length == 0) {
+    while (myArray[myArray.length - i].length === 0) {
         i++;
     }
     return myArray[myArray.length - i];

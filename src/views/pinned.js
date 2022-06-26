@@ -26,10 +26,13 @@ export default function Pinned() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getPinnedList(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getPinnedList(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 

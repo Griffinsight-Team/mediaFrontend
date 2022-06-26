@@ -25,10 +25,13 @@ export default function SpotlightRead() {
         page: page,
     };
     const [data1, setData] = useState([]);
-    useEffect(async () => {
-        getSpotLight(params, (res) => {
-            setData(res);
-        });
+    useEffect(() => {
+        const fetchData = async () => {
+            getSpotLight(params, (res) => {
+                setData(res);
+            });
+        };
+        fetchData();
     }, [page]);
     const data = data1.results;
 
