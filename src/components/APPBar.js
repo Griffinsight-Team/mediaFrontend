@@ -45,7 +45,6 @@ export default function APPbar() {
                                         fields.path.includes(path)
                                             ? {
                                                   fontSize: "18px",
-                                                  color: "#ffffff",
                                                   fontWeight: "bold",
                                                   color: "black",
                                                   borderBottom:
