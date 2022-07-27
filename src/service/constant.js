@@ -3,6 +3,7 @@ const BASE_URL = process.env.REACT_APP_BASE;
 export const PATHS = {
     BASE: BASE_URL,
     ARTICLE: BASE_URL + "/article/",
+    PAGE_COUNT: BASE_URL + "/article/getpagecount",
     ART: (id) => BASE_URL + "/article/" + id + "/",
     NEWSLETTER: BASE_URL + "/newsletter/",
     SEARCH: (id) => BASE_URL + "/search/" + id + "/",

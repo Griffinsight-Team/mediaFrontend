@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getArticle } from "../service/api";
+import { getArticle, getPageCount } from "../service/api";
 import Pinned from "./pinned";
 
 const scrollToTop = () => {
@@ -27,15 +27,25 @@ export default function Articles() {
         page: page,
     };
     const [data1, setData] = useState([]);
+    const [maxPage, setMax] = useState(0);
+    //const [articlePerPage, setArticlePerPage] = useState(0);
+    const [curr,setCurr]= useState(1);
+    
     useEffect(() => {
         const fetchData = async () => {
             getArticle(params, (res) => {
                 setData(res);
             });
+            getPageCount(params, (res) => {
+                //setArticlePerPage(res.articlePerPage);
+                setMax((res.pageCount));
+            });
         };
         fetchData();
-    }, [page]);
+    }, [page]); // eslint-disable-line react-hooks/exhaustive-deps
+    console.log(data1);
     const data = data1.results;
+    
 
     if (data) {
         return (
@@ -117,13 +127,15 @@ export default function Articles() {
                             disabled={(data1.previous ?false:true)}
                             onClick={() => {
                                 setPage(page - 1);
+                                setCurr(curr-1);
                                 scrollToTop();
+                                
                             }}
                         >
                             <ArrowBackIosIcon fontSize="small" />
                         </IconButton>
                     }
-
+                    {<>{page}/{maxPage}</>}
                     {
                         <IconButton
                             aria-label="delete"
@@ -131,6 +143,7 @@ export default function Articles() {
                             disabled={(data1.next?false:true)}
                             onClick={() => {
                                 setPage(page + 1);
+                                setCurr(curr+1);
                                 scrollToTop();
                             }}
                         >

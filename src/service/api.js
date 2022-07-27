@@ -14,6 +14,9 @@ export function getArticle(params, cb) {
         cb(res);
     });
 }
+export function getPageCount(params, cb) {
+    API.GET(PATHS.PAGE_COUNT, {}, params, function (res) {  cb(res); });
+}
 export function getAcademics(params, cb) {
     API.GET(PATHS.ACADEMICS, {}, params, function (res) {
         cb(res);
