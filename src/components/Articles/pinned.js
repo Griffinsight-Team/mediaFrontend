@@ -16,7 +16,7 @@ export default function PinnedSideBar() {
 
     return (
         <>
-            <Card sx={{ marginTop: "20px", minWidth: 275 }}>
+            <Card csx={{ marginTop: "10px", minWidth: 275 }}>
                 <CardContent>
                     <div
                         style={{

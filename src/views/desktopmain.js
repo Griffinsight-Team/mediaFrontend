@@ -7,6 +7,7 @@ import { Button, Form } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import PinnedSideBar from "../components/Articles/pinned";
 import Footer from "../components/footerDesktop";
+import VideoBar from "../components/videoplayer";
 import { postNewsletter } from "../service/api";
 import { containsAnyDigit, getPath } from "../store/helper";
 import Academics from "./academics";
@@ -98,9 +99,11 @@ export default function DesktopMain() {
                             display: "flex",
                             flexDirection: "column",
                             height: "100%",
-                            width: "28%",
-                            marginLeft: "10px",
-                            marginTop: "8px",
+                            width: "25%",
+                            position:"fixed",
+                            left:"70%",
+                            marginTop: "1rem",
+
                         }}
                     >
                         <Card sx={{ minWidth: 275 }}>
@@ -166,9 +169,10 @@ export default function DesktopMain() {
 
                         <PinnedSideBar />
                     </div>
+                        <VideoBar/>
                 </Container>
 
-                <Container>
+                <Container >
                     <Footer />
                 </Container>
             </>
