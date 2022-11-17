@@ -171,10 +171,7 @@ export default function DesktopMain() {
                     </div>
                         <VideoBar/>
                 </Container>
-
-                <Container >
-                    <Footer />
-                </Container>
+                <Footer />
             </>
         );
     } else {

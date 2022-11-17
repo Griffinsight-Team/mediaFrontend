@@ -47,22 +47,23 @@
 }
 
 .footer {
-    border-top: 2px solid black;
+    border-top: 2px solid white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    color: black;
+    justify-content: center, top;
+    background-color: black;
+    padding: 1rem;
+    color: white;
     text-align: center;
 }
 .footerMob {
-    border-top: 2px solid black;
+    border-top: 2px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-
-    color: black;
+    background-color: black;
+    color: white;
     text-align: center;
 }
 

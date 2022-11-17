@@ -7,6 +7,7 @@ import { Button, Form } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import PinnedSideBar from "../components/Articles/pinned";
 import FooterMob from "../components/footerMob";
+import VideoBar from "../components/videoplayer";
 import { postNewsletter } from "../service/api";
 import { containsAnyDigit, getPath } from "../store/helper";
 import Academics from "./academics";
@@ -92,6 +93,7 @@ export default function MobileMain() {
 
                     {renderModule()}
                 </div>
+                <VideoBar/>
                 <div
                     style={{
                         display: "flex",
