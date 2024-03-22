@@ -5,6 +5,7 @@ export const FIELDS = [
     { name: "Spotlight", path: "/spotlight" },
     { name: "Opinion", path: "/opinion" },
     { name: "Sci-Tech", path: "/scitech" },
+    { name: "About", path: "/about" },
 ];
 
 export function getPath(path) {

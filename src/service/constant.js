@@ -18,6 +18,7 @@ export const PATHS = {
     WATCH: BASE_URL + "/spotlight/",
     PINNED: BASE_URL + "/pinnned/",
     PINNEDLIST: BASE_URL + "/pinned/",
+    ABOUT: BASE_URL + "/about"
 };
 
 export const API = {

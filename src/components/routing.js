@@ -12,6 +12,7 @@ export default function Routing() {
                 <Route path="/spotlight" element={<App />}></Route>
                 <Route path="/instilife" element={<App />}></Route>
                 <Route path="/opinion" element={<App />} />
+                <Route path="/about" element={<App />} />
                 <Route path="/scitech" element={<App />} />
                 <Route path="/:id" element={<App />} />
                 <Route path="*" element={<NotFoundPage />} />
