@@ -18,6 +18,7 @@ import Opinion from "./opinion";
 import Read from "./reading";
 import SciTech from "./sciTech";
 import Spotlight from "./spotlight";
+import About from "./about";
 
 export default function MobileMain() {
     const [email, setEmail] = useState("");
@@ -55,6 +56,8 @@ export default function MobileMain() {
                 return <SciTech />;
             case "opinion":
                 return <Opinion />;
+            case "about":
+                return <About />;
             case containsAnyDigit(path):
                 return <Read />;
             default:
